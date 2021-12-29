@@ -14,11 +14,39 @@
  * + printName(), that print the persons full name  (first name and last name)
  * + calculateAge(currentYear), that takes a number of current year (i.e. 2021), and returns the age of the person
  * + addInterest(newInterest), that takes  a string of a new interest, and adds it to the interest array, and returns back the array
- * after you are done with the class, create at least 3 objects of type Actor of your favorite actors
+ * after you are done with the class, create at least 3 objects of type Person of your favorite intersts
  */
 class Person {
-  // continue the code here
+  constructor(firstName, lastName, gender, birthYear, intrests) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.gender = gender;
+    this.birthYear = birthYear;
+    this.intrests = intrests;
+  }}
+  const fatma = new Person ("fatma","kamshad","female","1990",["Volleyball","Eating"])
+  
+  
+  calculateAge = (currentYaer) => {
+    this.birthYear = currentYaer - this.birthYear;
+  };
+
+  addIntrest = (newIntrest) => {
+    this.intrests.push(newIntrest);
+  };
 }
+const person1 = new Person(
+  "Fatemah",
+  "K",
+  "female",
+  "1990",
+  "Vollyball",
+  "kout",
+  "Trex",
+  "Eating"
+);
+
+// continue the code here
 
 /** (Question 2): (15000 Points)
  * 1. Write a class `Movie`, give it the following properties
@@ -43,8 +71,16 @@ class Person {
 
 class Movie {
   // continue the code here
+  constructor(title, duration, genre, rating) {
+    this.title = title;
+    this.duration = duration;
+    this.genre = genre;
+    this.rating = rating;
+  }
+  rate = (rating) => {
+    this.rating.push(rating);
+  };
 }
-
 /** (Question 3): (1000 Points)
  * 1. Create a class `Actor` that inherits `Person`, and adds the following properties
  * - movies: array of `Movie`
@@ -55,3 +91,9 @@ class Movie {
  */
 
 // write the class here
+class Actor extends Person {
+  movies = [];
+  addMovie = (movie) => {
+    this.Actor.push(movie);
+  };
+}
